@@ -1,0 +1,13 @@
+# The image URL is the location of the image we should send to the server
+
+# CAT IMAGE
+IMAGE_URL="https://tensorflow.org/images/blogs/serving/cat.jpg"
+
+#DOG IMAGE
+IMAGE_URL="https://i.redd.it/th4e32wiqwx31.jpg"
+
+#HORSE IMAGE
+IMAGE_URL="https://i.pinimg.com/originals/f6/09/26/f60926f7f4c63aedebdc7af8d4211122.jpg"
+
+# Caretta Caretta
+IMAGE_URL="https://upload.wikimedia.org/wikipedia/commons/5/53/Caretta_caretta_060417w2.jpg"
