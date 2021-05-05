@@ -1,5 +1,5 @@
 # Hybrid and Sovereign AI on Anthos Bare Metal
-AI and Machine Learning workflows on Anthos Bare Metal (ABM). This work will showcase
+AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6). This work will showcase
 the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
 Bare Metal.
 
