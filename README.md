@@ -3,7 +3,7 @@ AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.co
 the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
 Bare Metal.
 
-* ABM GPU Cluster
+* ABM Cluster on GCE using Terraform
 * TensorFlow ResNet Model Serving on ABM
 * TensorFlow ResNet Model Serving GPU on ABM (Coming Soon!)
 
