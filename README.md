@@ -5,6 +5,7 @@ Bare Metal.
 
 * ABM Cluster on GCE using Terraform
 * TensorFlow ResNet Model Serving on ABM
+* TensorFlow Training using Kubeflow TFJob
 * TensorFlow ResNet Model Serving GPU on ABM (Coming Soon!)
 
 ## Serving TensorFlow ResNet Model on ABM
