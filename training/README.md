@@ -17,10 +17,11 @@ snap install juju --classic
 kubectl get pvc
 ```
 
-Anthos clusters on bare metal cluster uses the local volume provisioner (LVP) to manage local persistent volumes. There are three types of storage classes for [local PVs](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6/installing/storage) in an Anthos clusters on bare metal cluster. 
-* LVP share
-* LVP node mounts
-* Anthos system
+Anthos clusters on bare metal cluster uses the local volume provisioner (LVP) to manage local persistent volumes. There are three types of storage classes for [local PVs](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6/installing/storage) in an Anthos clusters on bare metal cluster:
+
+** LVP share
+** LVP node mounts
+** Anthos system
 
 * Discuss node mounts
 
