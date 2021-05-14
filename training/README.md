@@ -3,7 +3,7 @@ TensorFlow training can be done on single node or in multi-node setup. Even thou
 
 The setting of TF_CONFIG environment variable can be a manual process if done outside Kubeflow, and this is the part which [TFJob Controller](https://github.com/kubeflow/tf-operator/blob/master/tf_job_design_doc.md#controller) automatically manages. 
 
-Anthos Bare Metal already provides access to k8s cluster. The next steps will show how to install Kubeflow (TFJob) on ABM using `juju` and then `MNIST` training.
+Anthos Bare Metal already provides access to k8s cluster and GPUs. The next steps will show how to install Kubeflow (TFJob) on ABM using `juju` and then `MNIST` training.
 
 1. Install the Juju client
 
