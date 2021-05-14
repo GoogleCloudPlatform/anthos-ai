@@ -5,7 +5,7 @@ The setting of TF_CONFIG environment variable can be a manual process if done ou
 
 Anthos Bare Metal already provides access to k8s cluster and GPUs. The next steps will show how to install Kubeflow (TFJob) on ABM using [Juju](https://juju.is/) followed by MNIST training. Juju is an Open Source Charmed Operator Framework, composed of a Charmed Operator Lifecycle Manager and the Charmed Operator SDK. It simplifies how you configure, scale and operate todays’ complex software. Juju deploys everywhere: to public or private clouds. [Charmed Kubeflow](https://charmed-kubeflow.io/) is the full set of K8s operators to deliver applications and services that make up the latest version of Kubeflow. Perform the steps below to get started:
 
-* Install the Juju client
+* Install the Juju client via [snap](https://snapcraft.io/docs/installing-snapd) using command:
 
 ```
 snap install juju --classic
