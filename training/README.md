@@ -65,7 +65,7 @@ watch -c juju status --color
 git clone https://github.com/kubeflow/tf-operator
 cd tf-operator/examples/v1/mnist_with_summaries
 
-# Deploy the event volume from `anthos-ai` repo
+# Deploy the event volume from anthos-ai repo
 kubectl apply -f anthos-ai/training/tfevent-volume
 
 # Submit the TFJob
