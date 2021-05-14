@@ -23,11 +23,12 @@ Anthos clusters on bare metal cluster uses the local volume provisioner (LVP) to
 2. LVP node mounts
 3. Anthos system
 
-Let's connect juju to the ABM k8s cluster:
+Let's connect juju to the ABM k8s cluster. Because we already have an ABM cluster, we will use Juju to deploy the Kubeflow CRDs (like TFJob) in order to run TensorFlow training. We'll specify the ABM cluster name which was provided during [Terraform](https://www.terraform.io/) automation. 
 
 * Connect Juju to k8s cluster
 ```
-juju add-k8s tfjobk8s --cluster-name=abm-tensorflow-tfjob-05132256 --storage=standard
+export ABM_CLUSTER_NAME=<YOUR_ABM_CLUSTER_NAME>
+juju add-k8s tfjobk8s --cluster-name=$ABM_CLUSTER_NAME --storage=standard
 ```
 
 * Create a controller
