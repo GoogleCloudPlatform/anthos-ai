@@ -3,9 +3,9 @@ TensorFlow training can be done on single node or in multi-node setup. Even thou
 
 The setting of TF_CONFIG environment variable can be a manual process if done outside Kubeflow, and this is the part which [TFJob Controller](https://github.com/kubeflow/tf-operator/blob/master/tf_job_design_doc.md#controller) automatically manages. 
 
-Anthos Bare Metal already provides access to k8s cluster and GPUs. The next steps will show how to install Kubeflow (TFJob) on ABM using `juju` and then `MNIST` training.
+Anthos Bare Metal already provides access to k8s cluster and GPUs. The next steps will show how to install Kubeflow (TFJob) on ABM using [Juju](https://juju.is/) followed by MNIST training. Juju is an Open Source Charmed Operator Framework, composed of a Charmed Operator Lifecycle Manager and the Charmed Operator SDK. It simplifies how you configure, scale and operate todays’ complex software. Juju deploys everywhere: to public or private clouds. [Charmed Kubeflow](https://charmed-kubeflow.io/) is the full set of K8s operators to deliver applications and services that make up the latest version of Kubeflow. Perform the steps below to get started:
 
-* Install the Juju client
+* Install the Juju client via [snap](https://snapcraft.io/docs/installing-snapd) using command:
 
 ```
 snap install juju --classic
@@ -23,11 +23,12 @@ Anthos clusters on bare metal cluster uses the local volume provisioner (LVP) to
 2. LVP node mounts
 3. Anthos system
 
-Let's connect juju to the ABM k8s cluster:
+Let's connect juju to the ABM k8s cluster. Because we already have an ABM cluster, we will use Juju to deploy the Kubeflow CRDs (like TFJob) in order to run TensorFlow training. We'll specify the ABM cluster name which was provided during [Terraform](https://www.terraform.io/) automation. 
 
 * Connect Juju to k8s cluster
 ```
-juju add-k8s tfjobk8s --cluster-name=abm-tensorflow-tfjob-05132256 --storage=standard
+export ABM_CLUSTER_NAME=<YOUR_ABM_CLUSTER_NAME>
+juju add-k8s tfjobk8s --cluster-name=$ABM_CLUSTER_NAME --storage=standard
 ```
 
 * Create a controller
