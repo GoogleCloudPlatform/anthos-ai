@@ -68,3 +68,64 @@ kubectl apply -f anthos-ai/training/tfevent-volume
 # Submit the TFJob
 kubectl apply -f tf_job_mnist.yaml
 ```
+
+You can check the running TensorFlow Job:
+
+```
+kubectl -n kubeflow get tfjob mnist -o yaml
+apiVersion: kubeflow.org/v1
+kind: TFJob
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"kubeflow.org/v1","kind":"TFJob","metadata":{"annotations":{},"name":"mnist","namespace":"kubeflow"},"spec":{"cleanPodPolicy":"None","tfReplicaSpecs":{"Worker":{"replicas":1,"restartPolicy":"Never","template":{"spec":{"containers":[{"command":["python","/var/tf_mnist/mnist_with_summaries.py","--log_dir=/train/logs","--learning_rate=0.01","--batch_size=150"],"image":"gcr.io/kubeflow-ci/tf-mnist-with-summaries:1.0","name":"tensorflow","volumeMounts":[{"mountPath":"/train","name":"training"}]}],"volumes":[{"name":"training","persistentVolumeClaim":{"claimName":"tfevent-volume"}}]}}}}}}
+  creationTimestamp: "2021-05-14T16:40:23Z"
+  generation: 1
+  name: mnist
+  namespace: kubeflow
+  resourceVersion: "669424"
+  selfLink: /apis/kubeflow.org/v1/namespaces/kubeflow/tfjobs/mnist
+  uid: 11a8d9e5-82ce-488f-a06f-929d31dfbb62
+spec:
+  cleanPodPolicy: None
+  tfReplicaSpecs:
+    Worker:
+      replicas: 1
+      restartPolicy: Never
+      template:
+        spec:
+          containers:
+          - command:
+            - python
+            - /var/tf_mnist/mnist_with_summaries.py
+            - --log_dir=/train/logs
+            - --learning_rate=0.01
+            - --batch_size=150
+            image: gcr.io/kubeflow-ci/tf-mnist-with-summaries:1.0
+            name: tensorflow
+            volumeMounts:
+            - mountPath: /train
+              name: training
+          volumes:
+          - name: training
+            persistentVolumeClaim:
+              claimName: tfevent-volume
+status:
+  conditions:
+  - lastTransitionTime: "2021-05-14T16:40:23Z"
+    lastUpdateTime: "2021-05-14T16:40:23Z"
+    message: TFJob mnist is created.
+    reason: TFJobCreated
+    status: "True"
+    type: Created
+  - lastTransitionTime: "2021-05-14T16:40:25Z"
+    lastUpdateTime: "2021-05-14T16:40:25Z"
+    message: TFJob kubeflow/mnist is running.
+    reason: TFJobRunning
+    status: "True"
+    type: Running
+  replicaStatuses:
+    Worker:
+      active: 1
+
+```
