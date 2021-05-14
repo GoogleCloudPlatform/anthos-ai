@@ -42,15 +42,10 @@ Controller  Model       User   Access     Cloud/Region  Models  Nodes  HA  Versi
 tfjobk8s*   controller  admin  superuser  tfjobk8s           1      1   -  2.9.0  
 ```
 
-* Add juju model 
+* Add juju model and deploy Kubeflow 
 
 ```
 juju add-model kubeflow
-```
-
-* Deploy Kubeflow
-
-``` 
 juju deploy kubeflow
 ```
 
