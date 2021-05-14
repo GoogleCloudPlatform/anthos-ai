@@ -23,7 +23,7 @@ Anthos clusters on bare metal cluster uses the local volume provisioner (LVP) to
 2. LVP node mounts
 3. Anthos system
 
-* Discuss node mounts
+Let's connect juju to the ABM k8s cluster:
 
 * Connect Juju to k8s cluster
 ```
