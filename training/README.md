@@ -4,7 +4,7 @@ TensorFlow training can be done on single node or in multi-node setup. Even thou
 The setting of TF_CONFIG environment variable can be a manual process if done outside Kubeflow, and this is the part which [TFJob Controller](https://github.com/kubeflow/tf-operator/blob/master/tf_job_design_doc.md#controller) automatically manages. 
 
 # Prerequisites
-* Anthos Bare Metal Cluster on GCE (using Terraform)
+* [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.7) Cluster on GCE (using [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli))
 * ABM GPU Cluster
 
 Checkout the [Github](https://github.com/GoogleCloudPlatform/anthos-samples/tree/master/anthos-bm-gcp-terraform) repo for more details on how to automatically setup ABM on Google Compute Engine and Terraform. 
