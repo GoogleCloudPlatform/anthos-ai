@@ -5,7 +5,7 @@ The setting of TF_CONFIG environment variable can be a manual process if done ou
 
 Anthos Bare Metal already provides access to k8s cluster and GPUs. The next steps will show how to install Kubeflow (TFJob) on ABM using `juju` and then `MNIST` training.
 
-1. Install the Juju client
+* Install the Juju client
 
 ```
 snap install juju --classic
@@ -17,38 +17,57 @@ snap install juju --classic
 kubectl get pvc
 ```
 
-Anthos clusters on bare metal cluster uses the local volume provisioner (LVP) to manage local persistent volumes. There are three types of storage classes for local PVs in an Anthos clusters on bare metal cluster. 
+Anthos clusters on bare metal cluster uses the local volume provisioner (LVP) to manage local persistent volumes. There are three types of storage classes for [local PVs](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6/installing/storage) in an Anthos clusters on bare metal cluster. 
 * LVP share
 * LVP node mounts
 * Anthos system
 
-https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6/installing/storage
+* Discuss node mounts
 
-*Discuss node mounts*
-
-2. Connect Juju to k8s cluster
+* Connect Juju to k8s cluster
+```
 juju add-k8s tfjobk8s --cluster-name=abm-tensorflow-tfjob-05132256 --storage=standard
+```
 
-3. Create a controller
+* Create a controller
+```
 juju bootstrap tfjobk8s
+```
 
-4.
-tfadmin@abm-tensorflow-tfjob-05132256-ws0-001:~$ juju controllers
-Use --refresh option with this command to see the latest information.
+* Check controllers
 
+```
 Controller  Model       User   Access     Cloud/Region  Models  Nodes  HA  Version
 tfjobk8s*   controller  admin  superuser  tfjobk8s           1      1   -  2.9.0  
+```
 
-5. juju add-model kubeflow
+* Add juju model 
 
-6. juju deploy kubeflow
+```
+juju add-model kubeflow
+```
 
-7. watch -c juju status --color
-When everything is green
+* Deploy Kubeflow
 
-8. git clone https://github.com/kubeflow/tf-operator
+``` 
+juju deploy kubeflow
+```
+
+* Verify progress of the install
+
+```
+watch -c juju status --color
+```
+
+* Let's git clone the MNIST TensorFlow training from Kubeflow
+
+```
+git clone https://github.com/kubeflow/tf-operator
 cd tf-operator/examples/v1/mnist_with_summaries
-# Deploy the event volume
-kubectl apply -f tfevent-volume
+
+# Deploy the event volume from `anthos-ai` repo
+kubectl apply -f anthos-ai/training/tfevent-volume
+
 # Submit the TFJob
 kubectl apply -f tf_job_mnist.yaml
+```
