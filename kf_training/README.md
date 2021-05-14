@@ -1,4 +1,4 @@
-# TensorFlow Training using TFJob
+# TensorFlow MNIST Training using Kubeflow TFJob
 Follow the steps below to create a Kubeflow based ABM TensorFlow Training cluster.
 
 1. Install the Juju client
