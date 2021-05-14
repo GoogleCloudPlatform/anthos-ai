@@ -73,6 +73,11 @@ You can check the running TensorFlow Job:
 
 ```
 kubectl -n kubeflow get tfjob mnist -o yaml
+
+```
+You should see the following output:
+
+```
 apiVersion: kubeflow.org/v1
 kind: TFJob
 metadata:
