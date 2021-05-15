@@ -59,7 +59,7 @@ docker push $GCR_IMAGEPATH
 ```
 
 
-### Steps
+### ABM GCE Cluster using Terraform
 Create GCE demo host and perform few steps to setup the host:
 
 ```
@@ -159,7 +159,7 @@ kubectl get deployments
 kubectl get pods
 ```
 
-Create TensorFlow ResNet model service on ABM Cluster
+### TensorFlow ResNet model service on ABM Cluster
 
 ```
 git clone https://github.com/GoogleCloudPlatform/anthos-ai
