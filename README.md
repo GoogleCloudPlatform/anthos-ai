@@ -3,10 +3,15 @@ AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.co
 the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
 Bare Metal.
 
-* ABM Cluster on GCE using Terraform
-* TensorFlow ResNet Model Serving on ABM
-* TensorFlow Training using Kubeflow TFJob
+## Table of Contents
+
+<!-- toc -->
+* [ABM Cluster on GCE using Terraform](#)
+* [TensorFlow ResNet Model Serving on ABM](#serving-tensorflow-resnet-model-on-abm)
+* [TensorFlow Training using Kubeflow TFJob]()
 * TensorFlow ResNet Model Serving GPU on ABM (Coming Soon!)
+
+<!-- tocstop -->
 
 ## Serving TensorFlow ResNet Model on ABM
 In this installation you'll see how to create an end-to-end TensorFlow ML
