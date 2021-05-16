@@ -1,17 +1,20 @@
 # Hybrid and Sovereign AI on Anthos Bare Metal
-AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6). This work will showcase
-the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
-Bare Metal.
 
 # Table of Contents
 
 <!-- toc -->
+* [Overview](#overview)
 * [ABM Cluster on GCE using Terraform](#abm-gce-cluster-using-terraform)
 * [TensorFlow ResNet Model Serving on ABM](#serving-tensorflow-resnet-model-on-abm)
 * [TensorFlow Training using Kubeflow TFJob](training#tensorflow-mnist-training-on-abm-using-kubeflow-tfjob)
 * TensorFlow ResNet Model Serving GPU on ABM (Coming Soon!)
 
 <!-- tocstop -->
+
+## Overview
+AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6). This work will showcase
+the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
+Bare Metal.
 
 ## Serving TensorFlow ResNet Model on ABM
 In this installation you'll see how to create an end-to-end TensorFlow ML
