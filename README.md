@@ -12,9 +12,8 @@
 <!-- tocstop -->
 
 ## Overview
-AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6). This work will showcase
-the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
-Bare Metal.
+AI and Machine Learning workflows using TensorFlow on [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6). TensorFlow is one of the most popular ML frameworks ([10M+ downloads](https://pypistats.org/packages/tensorflow) per month) in use today, but at the same time presents a lot of challenges when it comes to setup (GPUs, CUDA Drivers, TF Serving etc), performance tuning, cluster provisioning, maintenance, model serving etc. This work will showcase
+the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos Bare Metal.
 
 ## Serving TensorFlow ResNet Model on ABM
 In this installation you'll see how to create an end-to-end TensorFlow ML
