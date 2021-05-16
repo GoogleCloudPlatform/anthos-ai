@@ -83,7 +83,7 @@ You can check the running TensorFlow Job:
 kubectl -n kubeflow get tfjob mnist -o yaml
 
 ```
-You should see the output. Notice, how the code is running an image `gcr.io/kubeflow-ci/tf-mnist-with-summaries:1.0` and python TensorFlow code `/var/tf_mnist/mnist_with_summaries.py`
+You should see the output as shown below. Notice, how the code is running an image `gcr.io/kubeflow-ci/tf-mnist-with-summaries:1.0` and python TensorFlow code `/var/tf_mnist/mnist_with_summaries.py`
 
 ```
 apiVersion: kubeflow.org/v1
