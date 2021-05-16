@@ -1,12 +1,22 @@
 # Hybrid and Sovereign AI on Anthos Bare Metal
-AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6). This work will showcase
-the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
-Bare Metal.
 
-* ABM Cluster on GCE using Terraform
-* TensorFlow ResNet Model Serving on ABM
-* TensorFlow Training using Kubeflow TFJob
+# Table of Contents
+
+<!-- toc -->
+* [Overview](#overview)
+* [Terraform as IaC Substrate](#terraform-as-iac-substrate)
+* [ABM Cluster on GCE using Terraform](#abm-gce-cluster-using-terraform)
+* [TensorFlow ResNet Model Serving on ABM](#serving-tensorflow-resnet-model-on-abm)
+* [TensorFlow Training using Kubeflow TFJob](training#tensorflow-mnist-training-on-abm-using-kubeflow-tfjob)
 * TensorFlow ResNet Model Serving GPU on ABM (Coming Soon!)
+
+<!-- tocstop -->
+
+## Overview
+AI and Machine Learning workflows using TensorFlow on [Anthos Bare Metal](https://cloud.google.com/anthos/clusters/docs/bare-metal/1.6). TensorFlow is one of the most popular ML frameworks ([10M+ downloads](https://pypistats.org/packages/tensorflow) per month) in use today, but at the same time presents a lot of challenges when it comes to setup (GPUs, CUDA Drivers, TF Serving etc), performance tuning, cluster provisioning, maintenance, and model serving. This work will showcase the easy to use guides for ML model serving, training, infrastructure, ML Notebooks, and more on Anthos Bare Metal.
+
+## Terraform as IaC Substrate
+[Terraform](https://www.terraform.io/) is an open-source infrastructure as code software tool, and one of the ways in which Enterprise IT teams create, manage, and update infrastructure resources such as physical machines, VMs, switches, containers, and more. Provisioning the hardware or resources is always the first step in the process and these guides will be using Terraform as a common substrate to create the infrastructure for AI/ML apps. Checkout our upstream contribution to the Google Terraform Provider for [GPU support](https://github.com/terraform-google-modules/terraform-google-vm/pull/160) in the [instance_template module](https://github.com/terraform-google-modules/terraform-google-vm/pull/158). 
 
 ## Serving TensorFlow ResNet Model on ABM
 In this installation you'll see how to create an end-to-end TensorFlow ML
@@ -54,7 +64,7 @@ docker push $GCR_IMAGEPATH
 ```
 
 
-### Steps
+### ABM GCE Cluster using Terraform
 Create GCE demo host and perform few steps to setup the host:
 
 ```
@@ -154,7 +164,7 @@ kubectl get deployments
 kubectl get pods
 ```
 
-Create TensorFlow ResNet model service on ABM Cluster
+### TensorFlow ResNet model service on ABM Cluster
 
 ```
 git clone https://github.com/GoogleCloudPlatform/anthos-ai
