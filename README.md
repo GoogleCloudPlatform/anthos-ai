@@ -4,7 +4,7 @@
 
 <!-- toc -->
 * [Overview](#overview)
-* [Terraform as IaC](#terraform)
+* [Terraform as IaC](#terraform-as-iac)
 * [ABM Cluster on GCE using Terraform](#abm-gce-cluster-using-terraform)
 * [TensorFlow ResNet Model Serving on ABM](#serving-tensorflow-resnet-model-on-abm)
 * [TensorFlow Training using Kubeflow TFJob](training#tensorflow-mnist-training-on-abm-using-kubeflow-tfjob)
