@@ -3,7 +3,7 @@ AI and Machine Learning workflows on [Anthos Bare Metal](https://cloud.google.co
 the ML model serving, training, infrastructure, ML Notebooks, and more on Anthos
 Bare Metal.
 
-## Table of Contents
+# Table of Contents
 
 <!-- toc -->
 * [ABM Cluster on GCE using Terraform](#abm-gce-cluster-using-terraform)
