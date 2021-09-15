@@ -8,7 +8,8 @@
 * [ABM Cluster on GCE using Terraform](#abm-gce-cluster-using-terraform)
 * [TensorFlow ResNet Model Serving on ABM](#serving-tensorflow-resnet-model-on-abm)
 * [TensorFlow Training using Kubeflow TFJob](training#tensorflow-mnist-training-on-abm-using-kubeflow-tfjob)
-* TensorFlow ResNet Model Serving GPU on ABM (Coming Soon!)
+* Deploying TensorFlow ResNet Model on ABM with Anthos Config Management (Coming Soon!)
+* Deploying TensorFlow ML GPU Model on ABM with ACM (Coming Soon!)
 
 <!-- tocstop -->
 
